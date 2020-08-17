@@ -197,7 +197,7 @@ public class SearchBankSlipResponse extends PagedResponse<SearchBankSlipResponse
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 class TitleOccurrence {
     @JsonProperty("codigo")
     private String code;
@@ -206,19 +206,17 @@ class TitleOccurrence {
     private String message;
 
     @JsonProperty("criado")
-    @JsonFormat(pattern = DateUtil.DATE_TIME_OFFSET_ISO_FORMAT)
-    private LocalDateTime creationDate;
+    private String creationDate;
 
     @JsonProperty("atualizado")
-    @JsonFormat(pattern = DateUtil.DATE_TIME_OFFSET_ISO_FORMAT)
-    private LocalDateTime lastUpdate;
+    private String lastUpdate;
 }
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 class TitleMovements {
     @JsonProperty("codigo")
     private String code;
@@ -227,8 +225,7 @@ class TitleMovements {
     private String message;
 
     @JsonProperty("data")
-    @JsonFormat(pattern = DateUtil.DATE_TIME_TECNOSPEED_PATTERN)
-    private LocalDateTime date;
+    private String date;
 
     @JsonProperty("ocorrencias")
     private List<TitleMovementOccurrence> occurrences;
@@ -238,7 +235,7 @@ class TitleMovements {
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 class TitleMovementOccurrence {
     @JsonProperty("codigo")
     private String code;

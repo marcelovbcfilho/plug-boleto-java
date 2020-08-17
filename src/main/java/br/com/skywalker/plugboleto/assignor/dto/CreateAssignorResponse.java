@@ -1,5 +1,6 @@
 package br.com.skywalker.plugboleto.assignor.dto;
 
+import br.com.skywalker.plugboleto.account.dto.CreateAccountResponse;
 import br.com.skywalker.plugboleto.common.Response;
 import br.com.skywalker.plugboleto.common.ResponseStatus;
 import br.com.skywalker.plugboleto.util.DateUtil;
@@ -102,7 +103,7 @@ public class CreateAssignorResponse extends Response<CreateAssignorResponse.Crea
         private String addressSate;
 
         @JsonProperty("contas")
-        private List<String> accounts;
+        private List<CreateAccountResponse> accounts;
 
         @JsonProperty("cidadeibge")
         private long addressIBGECode;
