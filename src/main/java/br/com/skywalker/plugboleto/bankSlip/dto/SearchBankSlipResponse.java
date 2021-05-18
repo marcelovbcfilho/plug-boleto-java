@@ -89,11 +89,11 @@ public class SearchBankSlipResponse extends PagedResponse<SearchBankSlipResponse
     @JsonProperty("TituloMensagem03")
     private String titleMessage3;
 
-    @JsonProperty("TituloOcorrencias")
-    private List<TitleOccurrence> titleOccurrences;
+//    @JsonProperty("TituloOcorrencias")
+//    private List<TitleOccurrence> titleOccurrences;
 
-    @JsonProperty("TituloMovimentos")
-    private List<TitleMovements> titleMovements;
+//    @JsonProperty("TituloMovimentos")
+//    private List<TitleMovements> titleMovements;
 
     @JsonProperty("TituloNossoNumero")
     private String titleOurNumber;
